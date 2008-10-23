@@ -1,7 +1,7 @@
 %define date 20081023
 Name:       qzion
 Version:    0.4.0
-Release:    %mkrel 0.%date.1
+Release:    %mkrel 0.%date.2
 License:    GPL
 Group:      Development/KDE and Qt 
 Summary:    QZion is an canvas abstraction used by and made for QEdje
@@ -14,20 +14,6 @@ BuildRequires: kde4-macros
 
 %description
 QZion is an canvas abstraction used by and made for QEdje
-
-#-----------------------------------------------
-%package   devel
-Summary:   Devel stuff for kdebase 4
-Group:     Development/KDE and Qt
-
-%description  devel
-Devel packages needed to build QZion apps 
-
-%files devel
-%defattr(-,root,root)
-%_kde_includedir/*.h
-%_kde_libdir/pkgconfig/qzion.pc
-%_kde_libdir/libqzion.so
 
 #------------------------------------------------
 
@@ -46,6 +32,20 @@ Qzion library.
 %defattr(-,root,root)
 %_kde_libdir/libqzion.so.%{libqzion_major}*
 
+#-----------------------------------------------
+
+%package   devel
+Summary:   Devel stuff for kdebase 4
+Group:     Development/KDE and Qt
+Requires:  %libqzion = %version
+%description  devel
+Devel packages needed to build QZion apps
+
+%files devel
+%defattr(-,root,root)
+%_kde_includedir/*.h
+%_kde_libdir/pkgconfig/qzion.pc
+%_kde_libdir/libqzion.so
 
 #------------------------------------------------
 
