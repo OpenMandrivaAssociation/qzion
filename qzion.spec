@@ -8,6 +8,7 @@ Source:     http://dev.openbossa.org/qedje/downloads/source/qzion/%name-%version
 Url:        http://dev.openbossa.org/trac/qedje/
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: qt4-devel
+BuildRequires: kde4-macros
 
 %description
 QZion is an canvas abstraction used by and made for QEdje
