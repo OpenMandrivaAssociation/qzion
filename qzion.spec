@@ -36,6 +36,7 @@ Qzion library.
 %package -n python-qzion
 Summary: Qzion python bindings
 Group:     Development/KDE and Qt
+Requires: python-qt4
 
 %description -n python-qzion
 Qzion python bindings.
