@@ -1,16 +1,15 @@
-%define date 20081023
-Name:       qzion
-Version:    0.4.0
-Release:    %mkrel 0.%date.2
-License:    GPL
-Group:      Development/KDE and Qt 
-Summary:    QZion is an canvas abstraction used by and made for QEdje
-Source:     http://dev.openbossa.org/qedje/downloads/source/qzion/%name-%version.git%date.tar.bz2
-Patch0:     qzion-0.4.0-fix-lib-install.patch
-Url:        http://dev.openbossa.org/trac/qedje/
+Name: qzion
+Version: 0.4.0
+Release: %mkrel 1
+License: GPL
+Group: Development/KDE and Qt 
+Summary: QZion is an canvas abstraction used by and made for QEdje
+Source: %name-%version.tar.gz
+Url: http://code.openbossa.org//qedje/
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: qt4-devel
 BuildRequires: kde4-macros
+BuildRequires: python-qt4
 
 %description
 QZion is an canvas abstraction used by and made for QEdje
@@ -34,6 +33,19 @@ Qzion library.
 
 #-----------------------------------------------
 
+%package -n python-qzion
+Summary: Qzion python bindings
+Group:     Development/KDE and Qt
+
+%description -n python-qzion
+Qzion python bindings.
+
+%files -n python-qzion
+%py_sitedir/qzion
+%_datadir/sip/qzion
+
+#-----------------------------------------------
+
 %package   devel
 Summary:   Devel stuff for kdebase 4
 Group:     Development/KDE and Qt
@@ -50,8 +62,7 @@ Devel packages needed to build QZion apps
 #------------------------------------------------
 
 %prep
-%setup -q -n %name
-%patch0 -p1
+%setup -q -n qzion-mainline 
 
 %build
 %cmake_qt4
