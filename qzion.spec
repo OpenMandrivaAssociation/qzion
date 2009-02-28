@@ -10,6 +10,7 @@ BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: qt4-devel
 BuildRequires: kde4-macros
 BuildRequires: python-qt4
+%py_requires -d
 
 %description
 QZion is an canvas abstraction used by and made for QEdje
