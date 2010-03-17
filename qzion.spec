@@ -6,6 +6,7 @@ Group: Development/KDE and Qt
 Summary: QZion is an canvas abstraction used by and made for QEdje
 Source: %name-%version.tar.gz
 Patch0: qzion-0.4.0-gcc44.patch
+Patch1: qzion-0.4.0-fix-install.patch
 Url: http://code.openbossa.org//qedje/
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: qt4-devel
@@ -67,7 +68,7 @@ Devel packages needed to build QZion apps
 %prep
 %setup -q -n qzion-mainline 
 %patch0 -p1 -b .gcc44
-
+%patch1 -p0
 %build
 %cmake_qt4
 %make
