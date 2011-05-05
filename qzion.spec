@@ -1,6 +1,6 @@
 Name: qzion
 Version: 0.4.0
-Release: %mkrel 3
+Release: %mkrel 4
 License: GPL
 Group: Development/KDE and Qt 
 Summary: QZion is an canvas abstraction used by and made for QEdje
