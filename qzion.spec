@@ -1,6 +1,6 @@
 Name: qzion
 Version: 0.4.0
-Release: %mkrel 4
+Release: %mkrel 5
 License: GPL
 Group: Development/KDE and Qt 
 Summary: QZion is an canvas abstraction used by and made for QEdje
@@ -80,3 +80,37 @@ make DESTDIR=%buildroot install
 
 %clean
 rm -rf %buildroot
+
+
+%changelog
+* Thu May 05 2011 Oden Eriksson <oeriksson@mandriva.com> 0.4.0-4mdv2011.0
++ Revision: 669394
+- mass rebuild
+
+* Wed Mar 17 2010 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.4.0-3mdv2011.0
++ Revision: 524158
+- Fix install with new cmake
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - rebuilt for 2010.1
+
+* Thu Sep 03 2009 Christophe Fergeau <cfergeau@mandriva.com> 0.4.0-2mdv2010.0
++ Revision: 426845
+- rebuild
+- fix gcc 4.4 compilation
+
+* Sat Feb 28 2009 Helio Chissini de Castro <helio@mandriva.com> 0.4.0-1mdv2009.1
++ Revision: 345905
+- Update with new upstream final 0.4.0 package with python-bindings
+
+* Fri Oct 24 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.4.0-0.20081023.2mdv2009.1
++ Revision: 296854
+- Fix Requires on the devel package
+
+* Thu Oct 23 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.4.0-0.20081023.1mdv2009.1
++ Revision: 296841
+- Udpate to git snapshot
+- Add kde4-macros as BuildRequire
+- import qzion
+
+
