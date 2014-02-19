@@ -12,7 +12,7 @@ BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: qt4-devel
 BuildRequires: kde4-macros
 BuildRequires: python-qt4
-BuildRequires: pkgconfig(python-2.7)
+BuildRequires: pkgconfig(python)
 #%py_requires -d
 
 %description
