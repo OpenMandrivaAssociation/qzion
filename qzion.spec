@@ -13,7 +13,7 @@ BuildRequires: qt4-devel
 BuildRequires: kde4-macros
 BuildRequires: python-qt4
 BuildRequires: pkgconfig(python)
-#%py_requires -d
+BuildRequires: pkgconfig(QtWebKit)
 
 %description
 QZion is an canvas abstraction used by and made for QEdje
