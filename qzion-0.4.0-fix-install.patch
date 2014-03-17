@@ -1,7 +1,7 @@
 Index: src/CMakeLists.txt
 ===================================================================
---- src/CMakeLists.txt
-+++ src/CMakeLists.txt	2010-03-17 16:48:22.000000000 +0100
+--- ./src/CMakeLists.txt
++++ ./src/CMakeLists.txt	2010-03-17 16:48:22.000000000 +0100
 @@ -29,6 +29,6 @@
  install(FILES ${qzion_HEADERS} DESTINATION include/)
  
