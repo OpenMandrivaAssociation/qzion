@@ -9,9 +9,9 @@ Source0:	%{name}-%{version}.tar.gz
 Patch0:		qzion-0.4.0-gcc44.patch
 Patch1:		qzion-0.4.0-fix-install.patch
 BuildRequires:	kde4-macros
-BuildRequires:	python-qt4
+BuildRequires:	python2-qt4
 BuildRequires:	qt4-devel
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python2)
 BuildRequires:	pkgconfig(QtWebKit)
 
 %description
@@ -38,13 +38,13 @@ Qzion library.
 %package -n python-qzion
 Summary:	Qzion python bindings
 Group:		Development/KDE and Qt
-Requires:	python-qt4
+Requires:	python2-qt4
 
 %description -n python-qzion
 Qzion python bindings.
 
 %files -n python-qzion
-%{py_sitedir}/qzion
+%{py2_puresitedir}/qzion
 %{_datadir}/sip/qzion
 
 #-----------------------------------------------
@@ -69,10 +69,12 @@ Devel packages needed to build QZion apps
 %apply_patches
 
 %build
-%cmake_qt4
+unset PYTHONDONTWRITEBYTECODE
+%cmake_qt4 -DPYTHON_EXECUTABLE=%__python2
 %make
 
 %install
 cd build
+unset PYTHONDONTWRITEBYTECODE
 %makeinstall_std
 
