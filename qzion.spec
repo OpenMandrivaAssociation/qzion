@@ -67,7 +67,7 @@ Devel packages needed to build QZion apps
 
 %prep
 %setup -qn qzion-mainline 
-%apply_patches
+%autopatch -p1
 
 %build
 unset PYTHONDONTWRITEBYTECODE
