@@ -4,7 +4,7 @@ Version:	0.4.0
 Release:	14
 License:	GPLv2
 Group:		Development/KDE and Qt 
-Url:		http://code.openbossa.org//qedje/
+Url:		https://code.openbossa.org//qedje/
 Source0:	%{name}-%{version}.tar.gz
 Patch0:		qzion-0.4.0-gcc44.patch
 Patch1:		qzion-0.4.0-fix-install.patch
