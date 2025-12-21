@@ -8,6 +8,7 @@ Url:		https://code.openbossa.org//qedje/
 Source0:	%{name}-%{version}.tar.gz
 Patch0:		qzion-0.4.0-gcc44.patch
 Patch1:		qzion-0.4.0-fix-install.patch
+BuildRequires:	make
 BuildRequires:	kde4-macros
 BuildRequires:	python2-qt4
 BuildRequires:	python2-sip
